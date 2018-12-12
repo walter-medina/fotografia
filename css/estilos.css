@@ -39,12 +39,10 @@ nav>a{
 
 #imagenCentral{
 	background-color:  #82c3a6;
-
 }
 
-
 #imagen1{	
-	width: 85%;
+	width: 90%;
 	margin: 0 auto;
 	padding-top: 10px;
 	padding-bottom: 6px;	
@@ -56,47 +54,36 @@ nav>a{
 
 #imagenSecundaria{
 	background-color: #d5c75f;
-	
-
 }
 
 #contenedor{
 
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
 	display: flex;
 	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: red;
+	padding-bottom: 10px;	
 }
 
 #imagen2{
 	
 	width: 50%; 
-	text-align: center;
-	
-
+	float: left;
 }
 
 #imagen2>img{
-	width: 90%;
+	width: 100%;
 }
 
 #imagen3{
 	width: 50%; 
-	text-align: center;
-	background-color: white;
-
-	
-
+	float: right;	
+	margin-left: 10%;
 }
 
 #imagen3>img{
-	width: 90%;
+	width: 100%;
 }
-
-
-
 .active{
 	text-decoration: none;
 }
