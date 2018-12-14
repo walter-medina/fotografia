@@ -1,159 +1,206 @@
-@font-face{
-font-family: "Dancing Script";
-src:url('DancingScript-Regular.ttf');
+@font-face {
+	font-family: "Dancing Script";
+	src: url('DancingScript-Regular.ttf');
 }
-body{
+
+body {
 	background-color: #02010a;
 	font-family: 'Dancing Script', cursive;
 	animation-name: animacion;
 	animation-duration: 1.5s;
-	
 }
 
-#contenido{
-	width: 900px;	
+#contenido {
+	width: 900px;
 	margin: 0 auto;
-
 }
-
+/*header*/
 header{
-	background-color: #5b7989;
-	display: flex;
-	flex-direction: row;	
-	border-radius: 10px 10px 0px 0px;
-
-}
-header>h2{
-	
-	margin-left: 2%;
-	margin-top: 1.5%;	
-	color: white;
-	text-shadow: 2px 2px #02010a;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: row;
 }
 
-header>nav{
-	margin-left: 50%;
-	margin-top: 2%;	
+/*Menu del header*/
+header h1,header a:visited,header a:link{
+  color: white;
 }
 
-nav>a{
-	color: white;
-	padding-right: 14px;
+.titulo,.menu{
+  margin: auto;
 }
 
-#imagenCentral{
-	background-color:  #82c3a6;
+.titulo{
+  margin-right: 10vw;
+  text-shadow: 2px 2px #02010a;
 }
 
-#imagen1{	
+.menu{
+  margin-left: 10vw;
+
+}
+.menu a{
+	padding-left: 0.5vw;
+	color: white;	
+	font-size: 19px;	
+}
+
+#imagenCentral {
+	background-color: #82c3a6;
+}
+
+#imagen1 {
 	width: 90%;
 	margin: 0 auto;
 	padding-top: 10px;
-	padding-bottom: 6px;	
+	padding-bottom: 6px;
 }
 
-#imagen1 img{
+#imagen1 img {
 	width: 100%;
 }
 
-#imagenSecundaria{
+#imagenSecundaria {
 	background-color: #d5c75f;
 }
 
-#contenedorImg{
-
+#contenedorImg {
 	width: 95%;
 	margin: 0 auto;
-	display: flex;	
+	display: flex;
 	padding-top: 10px;
-	
 }
 
-#imagen2{    
-    width: 50%; 
-    text-align: center;    
-}
- 
-#imagen2 img{
-    width: 90%;
-    border: 2px solid black; 
-    box-shadow: 3px 5px #02010a;
-    transition: transform, 1s;     
+#imagen2 {
+	width: 50%;
+	text-align: center;
 }
 
-#imagen2 img:hover{
+#imagen2 img {
+	width: 90%;
+	border: 2px solid black;
+	box-shadow: 3px 5px #02010a;
+	transition: transform, 1s;
+}
+
+#imagen2 img:hover {
 	transform: rotate(10deg);
 }
- 
-#imagen3{
-    width: 50%; 
-    text-align: center; 
-}
- 
-#imagen3 img{
-    width: 90%;
-    border: 2px solid black; 
-    box-shadow: 3px 5px #02010a;
-    transition: transform, 1s;    
-}
-#imagen3 img:hover{
-	transform: translate(20px,-5px);
+
+#imagen3 {
+	width: 50%;
+	text-align: center;
 }
 
-
-.subtitulos{
-	margin-top: 0px;	
+#imagen3 img {
+	width: 90%;
+	border: 2px solid black;
+	box-shadow: 3px 5px #02010a;
+	transition: transform, 1s;
 }
-.subtitulos a{
+
+#imagen3 img:hover {
+	transform: translate(20px, -5px);
+}
+
+.subtitulos {
+	margin-top: 0px;
+}
+
+.subtitulos a {
 	text-decoration: none;
 	color: black;
 }
 
-footer{		
+footer {
 	background-color: #C6d5c5;
 	border-radius: 0px 0px 10px 10px;
-	
 }
 
-#contenedorFooter{
+#contenedorFooter {
 	width: 90%;
-	margin: 0 auto;	
+	margin: 0 auto;
 	display: flex;
 	padding-bottom: 50px;
 }
 
-.contenidoFooter{
-	 width: 50%;
-	 padding-bottom: 50px; 
-}
-.contenidoFooter h2{
-	margin-bottom:1px;
-}
-.contenidoFooter h4,h5{
-	margin:2px;
+.contenidoFooter {
+	width: 50%;
+	padding-bottom: 50px;
 }
 
-.active{
+.contenidoFooter h2 {
+	margin-bottom: 1px;
+}
+
+.contenidoFooter h4, h5 {
+	margin: 2px;
+}
+
+.active {
 	text-decoration: none;
 }
 
-@keyframes animacion{
-
-	0%{
+@keyframes animacion {
+	0% {
 		margin-top: 150%;
 		transform: translateY(-5px);
 	}
-	60%{
+	60% {
 		margin-top: -5%;
 		transform: translateY(0px);
 	}
-	100%{
+	100% {
 		margin-top: 5px;
 		transform: translateY(5px);
 	}
 }
 
+/*Aplicando media query para adaptarlo al movil*/
 
+@media screen and (max-width:899px) {
+	#contenido{
+		width: 100%;
+	}
+	header {	 
+	  display: flex;
+	  flex-direction: column;
+	}
+	.titulo{
+ 		 text-align: center;
+ 		 margin:auto;
+	}
+	.menu{	
+		text-align: center;
+		margin:auto;
+		padding-bottom: 3vw;
+	}
 
+	#contenedorImg {	
+	display: flex;
+	flex-direction: column;
+	}
 
+	#imagen2 {
+	width: 100%;
+	text-align: center;
+	}
 
+	#imagen3 {
+		width: 100%;
+		text-align: center;
+	}
+
+	#contenedorFooter {	
+	display: flex;
+	flex-direction: column;	
+	}
+
+	.contenidoFooter {
+	width: 100%;
+	padding-bottom: 1vw;
+	
+	}
+	
+}
