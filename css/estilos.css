@@ -61,16 +61,46 @@ header h1,header a:visited,header a:link{
 	width: 100%;
 }
 
-#imagenSecundaria {
+.contenedorImagenes {
 	background-color: #d5c75f;
 }
 
-#contenedorImg {
+.contenedorImg {
 	width: 95%;
 	margin: 0 auto;
 	display: flex;
 	padding-top: 10px;
 }
+
+.foto{
+	width: 90%;
+	text-align: center;
+	padding: 1vw;
+}
+
+#foto1, #foto2 ,#foto3 ,#foto4,#foto5 ,#foto6{
+	width: 90%;
+	border: 2px solid black;
+	
+}
+
+/*Aplicando Filtros:*/
+#foto1{
+	-webkit-filter:blur(10px);
+	filter: blur(10px);
+}
+
+#foto2,#foto4,#foto6{
+	-webkit-filter:grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#foto3{
+	-webkit-filter:sepia(90%);
+	filter: sepia(90%);
+}
+
+/**++++++++++++++++++++++++*/
 
 #imagen2 {
 	width: 50%;
@@ -177,19 +207,19 @@ footer {
 		padding-bottom: 3vw;
 	}
 
-	#contenedorImg {	
+	.contenedorImg {	
 	display: flex;
 	flex-direction: column;
 	}
 
-	#imagen2 {
+	#imagen2, #imagen3{
 	width: 100%;
 	text-align: center;
 	}
 
-	#imagen3 {
-		width: 100%;
-		text-align: center;
+	.foto{
+	width: 100%;
+	text-align: center;
 	}
 
 	#contenedorFooter {	
